@@ -68,7 +68,7 @@
 
     <properties>
         <cas.version>5.3.6</cas.version>
-        <springboot.version>1.5.17.RELEASE</springboot.version>
+        <springboot.version>1.5.18.RELEASE</springboot.version>
         <!-- app.server could be -jetty, -undertow, -tomcat, or blank if you plan to provide appserver -->
         <app.server>-tomcat</app.server>
 
