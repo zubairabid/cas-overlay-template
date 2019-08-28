@@ -14,9 +14,7 @@
 <main role="main" class="container mt-3 mb-3">
     <div layout:fragment="content" class="row">
         <div class="col-md" th:if="${delegatedAuthenticationProviderDominant == null}">
-            <!-- The following div is replaced by th:fragment="loginform" in the file
-            fragments/loginform.html -->
-            <div th:replace="fragments/loginform :: loginform"></div>
+            <div th:replace="fragments/loginform :: loginform">
                 <a href="fragments/loginform.html">Login Form goes here</a>
             </div>
         </div>
@@ -33,8 +31,11 @@
             <div th:replace="fragments/serviceui :: serviceUI">
                 <a href="fragments/serviceui.html">service ui fragment</a>
             </div>
-            <div th:replace="fragments/cas-resources-list :: cas-resource-list">
+            <!-- <div th:replace="fragments/cas-resources-list :: cas-resource-list">
                 <a href="fragments/cas-resources-list.html">cas-resource</a> list fragment
+            </div> -->
+            <div th:replace="fragments/notices :: notice">
+                <a href="fragments/notice.html">Notices go here</a>
             </div>
         </div>
         <!--<div id="providers" class="col-md mt-3 mt-md-0">
