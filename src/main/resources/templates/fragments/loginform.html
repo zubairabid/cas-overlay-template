@@ -20,7 +20,7 @@
                 <div class="card-body">
                     <form method="post" id="fm1" th:object="${credential}" action="login">
                         <div class="alert alert-danger" th:if="${#fields.hasErrors('*')}">
-                            <span th:each="err : ${#fields.errors('*')}" th:utext="${err + ' '}">Example error</span>
+                            <span th:each="err : ${#fields.errors('*')}" th:utext="${err + ' '}">Some error has occured.</span>
                         </div>
 
                         <h3 th:utext="#{screen.welcome.instructions}">Enter your Username and Password</h3>
@@ -49,7 +49,7 @@
                         </section>
 
                         <section class="form-group">
-                            <label for="username" th:utext="#{screen.welcome.label.netid}">Username</label>
+                            <label for="username" th:utext="#{screen.welcome.label.netid}">Email</label>
 
                             <div th:if="${openIdLocalId}">
                                 <strong>

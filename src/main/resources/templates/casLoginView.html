@@ -14,7 +14,9 @@
 <main role="main" class="container mt-3 mb-3">
     <div layout:fragment="content" class="row">
         <div class="col-md" th:if="${delegatedAuthenticationProviderDominant == null}">
-            <div th:replace="fragments/loginform :: loginform">
+            <!-- The following div is replaced by th:fragment="loginform" in the file
+            fragments/loginform.html -->
+            <div th:replace="fragments/loginform :: loginform"></div>
                 <a href="fragments/loginform.html">Login Form goes here</a>
             </div>
         </div>
