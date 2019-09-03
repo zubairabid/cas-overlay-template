@@ -8,11 +8,19 @@
     <title th:text="#{screen.logout.confirm.header}">Confirm Logout View</title>
     <link href="../static/css/cas.css" rel="stylesheet" th:remove="tag" />
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto:400,600&display=swap');
+    .logout-card {
+        font-family: 'Roboto', sans-serif;
+        border: 2px solid #235159;
+        padding: 2rem;
+    }
 
+</style>
 <body>
 <main role="main" class="container mt-3 mb-3">
     <div layout:fragment="content">
-        <div class="alert alert-info">
+        <div class="alert alert-info logout-card">
             <h2 th:utext="#{screen.logout.confirm.header}">Do you want to log out completely?</h2>
             <p th:remove="tag" th:utext="#{screen.logout.confirm.text}">An application may have redirected you to the Central
                 Authentication Service \
