@@ -8,11 +8,23 @@
     <title th:text="#{screen.badworkstation.heading}">Bad Workstation View</title>
     <link href="../static/css/cas.css" rel="stylesheet" th:remove="tag" />
 </head>
-
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto:400,600&display=swap');
+    .login-na {
+        border: 2px solid red;
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        padding: 3rem 0;
+        letter-spacing: 1.3px;
+    }
+    .login-na h2{
+        font-weight: 600;
+    }
+</style>
 <body id="cas">
 <main role="main" class="container mt-3 mb-3">
     <div layout:fragment="content">
-        <div class="alert alert-danger">
+        <div class="alert alert-danger login-na">
             <h2 th:utext="#{screen.badworkstation.heading}">You cannot login from this workstation.</h2>
             <p th:utext="#{screen.badworkstation.message}">Please contact the system administrator to regain access.</p>
         </div>
