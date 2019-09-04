@@ -10,10 +10,15 @@
 </head>
 <body>
     <header th:fragment="header" role="banner">
-        <nav class="navbar navbar-expand-md fixed-top">
+        <nav class="container navbar navbar-expand-md fixed-top" style="background-color: transparent; border-bottom: 1px solid black; height: 120px; position: relative;">
             <a class="navbar-brand" href="#">
-                <img class="logo" src="images/iiit-new.png">
+                <img class="logo" src="images/iiit-new.png" style="height: 100px; width: auto;">
             </a>
+            <div class="text-right" style="display: block;width: 100%;">
+                <h2 class="navbar-text" style="color: #032955; margin-right: 0;">
+                    Central Authentication Service (CAS)
+                </h2>
+            </div>
         </nav>
     </header>
 

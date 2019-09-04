@@ -9,12 +9,31 @@
     <link href="../static/css/cas.css" rel="stylesheet" th:remove="tag"/>
 </head>
 
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto:400,600&display=swap');
+    .login-success {
+        border: 2px solid green;
+        padding: 2rem;
+    }
+    a {
+        color: inherit;
+        font-weight: 700;
+    }
+    a:hover{
+        text-decoration: none;
+    }
+    .login-success  h2{
+        text-align: center;
+        padding: 1rem 0;
+    }
+</style>
+
 <body>
 <main role="main" class="container mt-3 mb-3">
     <div layout:fragment="content" class="row">
         <div class="card-body">
 
-            <div class="alert alert-success">
+            <div class="alert alert-success login-success">
                 <h2 th:utext="#{screen.success.header}">Log In Successful</h2>
                 <p th:utext="#{screen.success.success(${principal.id})}">You, <strong>username</strong>, have successfully
                     logged into the Central Authentication Service. This is what CAS knows about you:However, you are seeing this page because CAS does not
@@ -45,12 +64,6 @@
             </div>
 
 
-        </div>
-
-        <div id="notices" class="col-md mt-3 mt-md-0">
-            <div th:replace="fragments/cas-resources-list :: cas-resource-list">
-                <a href="fragments/cas-resources-list.html">cas-resource</a> list fragment
-            </div>
         </div>
 
 </main>

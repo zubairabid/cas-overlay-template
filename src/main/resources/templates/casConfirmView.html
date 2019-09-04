@@ -8,11 +8,22 @@
     <title th:text="#{screen.confirmation.message}">Confirm View</title>
     <link href="../static/css/cas.css" rel="stylesheet" th:remove="tag" />
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto:400,600&display=swap');
+    .warn-card {
+        border: 2px solid #235159;
+        padding: 2rem;
+    }
+    
+    .warn-card h4{
+        padding-bottom: 1rem;
+    }
+</style>
 
 <body>
 <main role="main" class="container mt-3 mb-3">
     <div layout:fragment="content" class="confirmView">
-        <div class="alert alert-info">
+        <div class="alert alert-info warn-card">
             <h4 th:text="#{screen.confirmation.message}">You asked to be warned before logging into applications. Please
                 proceed.</h4>
 
