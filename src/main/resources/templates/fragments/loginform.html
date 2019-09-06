@@ -15,7 +15,7 @@
             <!-- Login form template begins here -->
             <div th:fragment="loginform" class="px-3">
                 <div>
-                    <h4 style="color: #032955;" th:text="#{cas.login.pagetitle}">Login</h4>
+                    <h5 style="color: #032955;" th:text="#{cas.login.pagetitle}">Login</h5>
                 </div>
                 <div>
                     <form method="post" id="fm1" th:object="${credential}" action="login">
@@ -47,7 +47,7 @@
                         </section>
 
                         <section class="form-group">
-                            <label for="username" th:utext="#{screen.welcome.label.netid}">Email</label>
+                            <label for="username">Email</label>
 
                             <div th:if="${openIdLocalId}">
                                 <strong>
@@ -72,7 +72,7 @@
                         </section>
 
                         <section class="form-group">
-                            <label for="password" th:utext="#{screen.welcome.label.password}">Password</label>
+                            <label for="password">Password</label>
 
                             <div>
                                 <input class="form-control required"
