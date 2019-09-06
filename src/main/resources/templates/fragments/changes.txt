@@ -1,0 +1,7 @@
+margin : 0 auto to nav class row
+
+divs inside content -> md6 and md6
+
+body class container
+
+remove height 120 px in nav row
