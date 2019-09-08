@@ -9,25 +9,19 @@
     <link href="../../static/css/cas.css" rel="stylesheet" th:remove="tag"/>
 </head>
 <body>
-<main role="main" class="container mt-3 mb-3">
+<main role="main" class="container mt-3 mb-3 pb-3">
     <div class="row">
-        <div class="col-md">
+        <div class="col-sm-12">
             <!-- Login form template begins here -->
-            <div th:fragment="loginform" class="card">
-                <div class="card-header text-center">
-                    <h2 th:text="#{cas.login.pagetitle}">Login</h2>
-                    <span class="fa-stack fa-2x hidden-xs">
-                      <i class="fa fa-circle fa-stack-2x"></i>
-                      <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
-                    </span>
+            <div th:fragment="loginform" class="px-3">
+                <div>
+                    <h5 style="color: #032955;" th:text="#{cas.login.pagetitle}">Login</h5>
                 </div>
-                <div class="card-body">
+                <div>
                     <form method="post" id="fm1" th:object="${credential}" action="login">
                         <div class="alert alert-danger" th:if="${#fields.hasErrors('*')}">
-                            <span th:each="err : ${#fields.errors('*')}" th:utext="${err + ' '}">Example error</span>
+                            <span th:each="err : ${#fields.errors('*')}" th:utext="${err + ' '}">Some error has occured.</span>
                         </div>
-
-                        <h3 th:utext="#{screen.welcome.instructions}">Enter your Username and Password</h3>
 
                         <section class="form-group">
                             <span th:if="${availableAuthenticationHandlerNames != null}">
@@ -53,7 +47,7 @@
                         </section>
 
                         <section class="form-group">
-                            <label for="username" th:utext="#{screen.welcome.label.netid}">Username</label>
+                            <label for="username">Email</label>
 
                             <div th:if="${openIdLocalId}">
                                 <strong>
@@ -78,7 +72,7 @@
                         </section>
 
                         <section class="form-group">
-                            <label for="password" th:utext="#{screen.welcome.label.password}">Password</label>
+                            <label for="password">Password</label>
 
                             <div>
                                 <input class="form-control required"
@@ -133,6 +127,7 @@
                                tabindex="6"
                                type="submit"
                                value="Login8"
+                               style="background-color: transparent; color: black;"
                         />
 
                         <span th:if="${recaptchaVersion=='v2'}" th:remove="tag">
@@ -144,6 +139,7 @@
                                    tabindex="6"
                                    type="submit"
                                    value="Login3"
+                                   style="background-color: transparent; color: black;"
                             />
                             <button class="btn btn-block btn-submit g-recaptcha"
                                     th:if="${recaptchaSiteKey != null AND recaptchaInvisible != null AND recaptchaInvisible}"
@@ -153,6 +149,7 @@
                                     accesskey="l"
                                     th:text="#{screen.welcome.button.login}"
                                     tabindex="6"
+                                    style="background-color: transparent; color: black;"
                             />
                         </span>
 
@@ -166,6 +163,7 @@
                                   tabindex="6"
                                   type="submit"
                                   value="Login3"
+                                  style="background-color: transparent; color: black;"
                             />
                          </span>
                     </form>
@@ -189,7 +187,7 @@
                     <div th:unless="${passwordManagementEnabled}">
                         <br/>
                         <span class="fa fa-question-circle"></span>
-                        <span th:utext="#{screen.pm.button.forgotpwd}">Forgot your password?</span>
+                        <span th:utext="#{screen.pm.button.forgotpwd}">Change password</span>
                         <p/>
                     </div>
 

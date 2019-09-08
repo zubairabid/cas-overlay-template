@@ -10,10 +10,10 @@
 </head>
 <body>
 <main role="main" class="container mt-3 mb-3">
-    <div th:fragment="cas-resource-list" id="cas-resource-list" class="card d-sm-none d-md-block">
-        <div class="card-body">
-            <h3 class="card-title" th:text="#{cas.login.resources.header}">Note:</h3>
-            <ul>
+    <div th:fragment="notice" id="cas-resource-list" class="pt-0 card-body d-sm-none d-md-block" style="background-color: transparent;">
+        <div>
+            <h5 style="color: #032955">Note:</h5>
+            <ol style="color: #555;font-size: 0.8rem; line-height:1">
                 <li>
                     <p> Since CAS does not support Single Sign-Out as of now, please make sure you logout from all the applications and close the browser window when you have finished using the system. </p>
                 </li>
@@ -23,7 +23,7 @@
                 <li>
                     <p> It is recommended you choose a strong password since this single password is your gateway to all the computing resources at IIIT-H </p>
                 </li>
-            </ul>
+            </ol>
         </div>
     </div>
 </main>
