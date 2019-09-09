@@ -12,8 +12,13 @@
 <style>
     @import url('https://fonts.googleapis.com/css?family=Roboto:400,600&display=swap');
     .login-success {
-        border: 2px solid green;
         padding: 2rem;
+        background-color: rgb(178,241,245);
+        border: 2px solid rgb(0,209,221);
+        color: black;
+        margin: 0 auto;
+        width: 70%;
+        text-align: center;
     }
     a {
         color: inherit;
@@ -21,10 +26,12 @@
     }
     a:hover{
         text-decoration: none;
+        color: #032955;
     }
     .login-success  h2{
         text-align: center;
         padding: 1rem 0;
+        color : #032955;
     }
 </style>
 
@@ -36,17 +43,14 @@
             <div class="alert alert-success login-success">
                 <h2 th:utext="#{screen.success.header}">Log In Successful</h2>
                 <p th:utext="#{screen.success.success(${principal.id})}">You, <strong>username</strong>, have successfully
-                    logged into the Central Authentication Service. This is what CAS knows about you:However, you are seeing this page because CAS does not
-                    know about your target destination and how to get you there. Examine the authentication request again
-                    and make sure a target service/application that is authorized and registered with CAS is specified.</p>
-
-                <p th:unless="${#maps.isEmpty(principal.attributes)}"><a data-toggle="collapse" href="#divAttributes" aria-expanded="false" aria-controls="divAttributes">Click here</a>
-                    to view attributes resolved and retrieved for <strong><span th:utext="${principal.id}"/></strong>.</p>
+                    logged into the Central Authentication Service. 
+                <!-- <p th:unless="${#maps.isEmpty(principal.attributes)}"><a data-toggle="collapse" href="#divAttributes" aria-expanded="false" aria-controls="divAttributes">Click here</a> -->
+                    <!-- to view attributes resolved and retrieved for <strong><span th:utext="${principal.id}"/></strong>.</p> -->
 
                 <p th:utext="#{screen.success.security}">When you are finished, for security reasons, please <a
                         href="logout">log out</a> and exit your web browser.</p>
             </div>
-            <div class="collapse" id="divAttributes">
+            <!-- <div class="collapse" id="divAttributes">
                 <table id="attributesTable" class="table table-striped table-bordered mt-3">
                     <thead>
                     <tr>
@@ -61,7 +65,7 @@
                     </tr>
                     </tbody>
                 </table>
-            </div>
+            </div> -->
 
 
         </div>
