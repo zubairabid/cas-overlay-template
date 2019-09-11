@@ -36,12 +36,7 @@
             <div class="alert alert-success login-success">
                 <h2 th:utext="#{screen.success.header}">Log In Successful</h2>
                 <p th:utext="#{screen.success.success(${principal.id})}">You, <strong>username</strong>, have successfully
-                    logged into the Central Authentication Service. This is what CAS knows about you:However, you are seeing this page because CAS does not
-                    know about your target destination and how to get you there. Examine the authentication request again
-                    and make sure a target service/application that is authorized and registered with CAS is specified.</p>
-
-                <p th:unless="${#maps.isEmpty(principal.attributes)}"><a data-toggle="collapse" href="#divAttributes" aria-expanded="false" aria-controls="divAttributes">Click here</a>
-                    to view attributes resolved and retrieved for <strong><span th:utext="${principal.id}"/></strong>.</p>
+                    logged into the Central Authentication Service.</p>
 
                 <p th:utext="#{screen.success.security}">When you are finished, for security reasons, please <a
                         href="logout">log out</a> and exit your web browser.</p>
