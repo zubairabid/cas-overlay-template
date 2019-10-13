@@ -130,6 +130,8 @@ if (!String.prototype.startsWith) {
             'iiit.ac.in',
             'students.iiit.ac.in',
             'research.iiit.ac.in',
+            'alumni.outreach.iiit.ac.in',
+            'ecell.iiit.ac.in',
         ];
         var oldValue = '';
         var autoCompleteDomainName = function(e) {
