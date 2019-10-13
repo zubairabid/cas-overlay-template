@@ -44,9 +44,6 @@ dependencies {
 	// Other CAS dependencies/modules may be listed here...
 	compile "org.apereo.cas:cas-server-support-ldap:${project.'cas.version'}"
 	compile "org.apereo.cas:cas-server-support-json-service-registry:${casServerVersion}"
-	compile "org.apereo.cas:cas-server-support-saml-idp:${project.'cas.version'}"
-	compile "org.apereo.cas:cas-server-support-saml-sp-integrations:${project.'cas.version'}"
-	compile "org.apereo.cas:cas-server-support-saml-googleapps:${project.'cas.version'}"
 }
 
 tasks.findByName("jibDockerBuild")
